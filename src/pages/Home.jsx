@@ -1,20 +1,15 @@
 import React from 'react'
 import { useRef, useEffect } from 'react';
-export default function Home({ setGameMode, setIsGameStarted, navigate }) {
+export default function Home({ navigate }) {
+
   function startBeginnerMode() {
-    setIsGameStarted(true);
-    setGameMode('beginner');
     navigate('/beginner');
   }
   function startAdvancedMode() {
-    setIsGameStarted(true);
-    setGameMode('advanced');
     navigate('/advanced');
   }
 
-
   const canvasRef = useRef(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -65,12 +60,12 @@ export default function Home({ setGameMode, setIsGameStarted, navigate }) {
         </h1>
         <div className="flex flex-col text-4xl gap-8 font-medium">
           <h3 className='text-3xl'>Game Modes</h3>
-          <button className='relative p-4 overflow-hidden rounded-full '
+          <button className='relative p-4 overflow-hidden rounded-full bg-black '
             onClick={startBeginnerMode}>
             <span className='absolute inset-0 border-4 rounded-full hover:border-dashed border-white'></span>
             Beginner
           </button>
-          <button className='relative p-4 overflow-hidden rounded-full'
+          <button className='relative p-4 overflow-hidden rounded-full bg-black'
             onClick={startAdvancedMode}>
             <span className='absolute inset-0 border-4 rounded-full hover:border-dashed border-white'></span>
             Advanced
@@ -79,5 +74,5 @@ export default function Home({ setGameMode, setIsGameStarted, navigate }) {
       </div>
     </>
   )
-  
+
 }

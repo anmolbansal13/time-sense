@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Advanced() {
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const targetTimes = [5, 10, 15];
   const [currentTargetIndex, setCurrentTargetIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -69,17 +69,17 @@ export default function Advanced() {
               handleTimerButton();
             }
           }}
-          className="text-xl rounded-full bg-white text-black p-6 w-48 font-bold mt-12"
+          className="text-xl rounded-full bg-white text-black p-6 w-48 font-bold mt-12 hover:bg-gray-200"
         >
           {getButtonText()}
         </button>
         <section className="mt-12 px-3">
           {!isPlaying && results.length === targetTimes.length && (
             <div>
-              <h2 className="text-2xl font-bold mb-4">Results:</h2>
-              <div className="flex flex-row gap-2">
+              <h2 className="text-2xl font-bold mb-4 text-center">Results</h2>
+              <div className="flex flex-row gap-10">
                 {results.map((result, index) => (
-                  <div key={index} className="mb-4">
+                  <div key={index} className="mb-4 flex align-middle justify-center flex-col text-center">
                     <p>Target: {result.targetTime}s</p>
                     <p>Elapsed: {result.elapsedTime}s</p>
                     <p>Difference: {result.difference}s</p>

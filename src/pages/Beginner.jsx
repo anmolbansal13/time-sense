@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 
 export default function Beginner() {
-  const [showRules, setShowRules] = useState(false);
+  const [showRules, setShowRules] = useState(true);
   const toggleRules = () => {
     setShowRules(prevShowRules => !prevShowRules);
   }
@@ -37,7 +37,7 @@ export default function Beginner() {
           {(!isPlaying && isCompleted) && accuracy + 's'}
         </h1>
         <button onClick={toggleStartEnd}
-          className="text-xl rounded-full bg-white text-black p-6 w-48 font-bold">
+          className="text-xl rounded-full bg-white text-black p-6 w-48 font-bold hover:bg-gray-200">
           {isPlaying ? 'STOP TIMER' : 'START TIMER'}
         </button>
         <h3>Personal best: {best}s</h3>
