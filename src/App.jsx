@@ -8,7 +8,7 @@ function App() {
   let navigate = useNavigate();
 
   return (
-    <div classname="font-mono">
+    <div classname="bg-black">
       <Routes>
         <Route path="/" element={<Home navigate={navigate} />} />
         <Route path="/beginner" element={<Beginner navigate={navigate} />} />

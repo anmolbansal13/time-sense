@@ -2,7 +2,11 @@
 export default {
   content: ["*.html", "./src/**/*.jsx"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        mono: ['monospace', '"Roboto Mono"'],
+      }
+    },
   },
   plugins: [],
 }
