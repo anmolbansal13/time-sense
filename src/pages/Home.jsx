@@ -52,14 +52,14 @@ export default function Home({ navigate }) {
 
 
   return (
-    <>
+    <div className="font-mono">
       <canvas ref={canvasRef} className='h-screen w-screen fixed z-0 top-0 left-0'></canvas>
       <div className="w-screen h-screen flex justify-evenly items-center flex-col z-10 relative text-white">
         <h1 className="text-6xl text-center font-bold px-3">
           How's your sense of TIME?
         </h1>
         <div className="flex flex-col text-4xl gap-8 font-medium">
-          <h3 className='text-3xl'>Game Modes</h3>
+          <h3 className='text-3xl text-center'>Game Modes</h3>
           <button className='relative p-4 overflow-hidden rounded-full bg-black '
             onClick={startBeginnerMode}>
             <span className='absolute inset-0 border-4 rounded-full hover:border-dashed border-white'></span>
@@ -72,7 +72,7 @@ export default function Home({ navigate }) {
           </button>
         </div>
       </div>
-    </>
+    </div>
   )
 
 }
